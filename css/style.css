@@ -1,4 +1,8 @@
-@import 'https://fonts.googleapis.com/css?family=Muli:300,400|Open+Sans:400,800i';
+@import 'https://fonts.googleapis.com/css?family=Muli:300,400|Open+Sans:400,600,800i';
+
+/*
+Generic Styles
+*/
 
 html {
   height: 100%;
@@ -8,21 +12,193 @@ body {
   height: 100%;
 }
 
+.container {
+  width: 100%;
+}
+
+.100-width-image {
+  width: 100%;
+  height: auto;
+}
+
+.row {
+  position: relative;
+}
+
+.padding-10 {
+  padding: 10px;
+}
+
+.padding-20 {
+  padding: 20px;
+}
+
+.margin-top-0 {
+  margin-top: 0;
+}
+
+.margin-top-15 {
+  margin-top: 15px;
+}
+
+.margin-top-40 {
+  margin-top: 40px;
+}
+
+.margin-top-80 {
+  margin-top: 80px;
+}
+
+.col-400 {
+  height: 400px;
+}
+
+.col-300 {
+  height: 300px;
+}
+
+.relative {
+  position: relative;
+  height: 100%;
+}
+
+.absolute-bottom {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20px;
+}
+/*
+Font Styles
+*/
+
 h1 {
   font-family: 'Open Sans' !important;
   font-style: italic;
   font-weight: 800 !important;
+  font-size: 3em;
+  line-height: 1.2em;
+  color: white;
+}
+
+.h1-background-purple {
+  padding: 5px;
+  background-color: #280837;
+}
+
+.h1-background-blue {
+  padding: 5px;
+  background-color: #465BDB;
+}
+
+.h1-background-yellow {
+  padding: 5px;
+  background-color: #FFB54D;
+}
+
+.h1-background-green {
+  padding: 5px;
+  background-color: #33D694;
+}
+
+.h1-background-red {
+  padding: 5px;
+  background-color: #ED320A;
+}
+
+.h1-background-white {
+  padding: 5px;
+  background-color: #fff;
+}
+
+a {
+  color: white;
+}
+
+h2 {
+  font-family: 'Open Sans' !important;
+  font-weight: 600 !important;
+  font-size: 3em;
+  line-height: 1.2em;
   color: white;
 }
 
 h3 {
   font-family: 'Muli';
   font-weight: 300;
+  color: white;
+}
+
+p {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+.event-link {
+  transition: letter-spacing .5s;
+  text-decoration: none;
+  color: white;
+}
+
+.event-link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: white;
+  letter-spacing: 4px;
+}
+
+/*
+Background, and text colors
+*/
+
+.background-green {
+  background-color: #33D694;
+}
+
+.background-blue {
+  background-color: #465BDB;
+}
+
+.background-purple {
+  background-color: #280837;
+}
+
+.background-yellow {
+  background-color: #FFB54D;
+}
+
+.background-white {
+  background-color: #fff !important;
+}
+
+.green {
+  color: #33D694;
+}
+
+.blue {
+  color: #465BDB;
+}
+
+.white-text {
+  color: #fff !important;
+}
+
+/*
+Main Site Styles
+*/
+
+.fullscreen {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-image: url("../img/homephoto.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .navbar {
   padding: 10px 10px;
-  background-color: rgba(51,214,148, .8);
+  background-color: rgba(51,214,148, .0);
   margin: 0;
   border: none;
   border-radius: 0;
@@ -31,7 +207,7 @@ h3 {
 .navbar-brand {
   font-family: 'Muli';
   font-weight: 400;
-  color: #280837 !important;
+  color: #fff !important;
 }
 
 .navbar li a {
@@ -43,22 +219,32 @@ h3 {
 
 .navbar li a:hover {
   background-color: #280837 !important;
+  border: 1px white solid;
 }
 
 .hero-image {
+  position: relative;
   background-image: url("../img/placeholder.jpg");
   background-position: center;
   background-size: cover;
 
   display: block;
-  height: 70%;
+  height: 650px;
   width: 100%;
 }
 
 .hero-callout {
   float: left;
   width: 50%;
-  padding: 20px 40px;
+  height: 100%;
+  padding: 40px 40px;
+  position: relative;
+}
+
+.hero-callout-text {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 50px;
 }
 
 .outline-button {
@@ -67,15 +253,84 @@ h3 {
   color: white;
   border: .5px white solid;
   border-radius: 2px;
+  transition: background-color .5s, color .5s;
   width: auto;
 }
 
 .outline-button:hover {
-  background-color: #280837;
+  cursor: pointer;
+  background-color: #fff;
+  color: #33D694;
 }
 
-#particles-js {
+.hero-particles {
   float: right;
   width: 50%;
   height: 100%;
+}
+
+.join {
+  position: relative;
+  height: 400px;
+  width: 100%;
+}
+
+.join-cta {
+  position: absolute;
+  text-align: center;
+  margin-top: 70px;
+  width: 100%;
+  z-index: 4;
+}
+
+.join-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.group-title {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.bg-image {
+  background-position: center;
+  background-size: 110%;
+  padding: 0;
+  transition: background-size .5s;
+}
+
+.bg-image:hover {
+  background-size: 115%;
+}
+
+.group-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, .4);
+}
+
+.group-wrapper h2 {
+  font-size: 2em;
+}
+
+.group-button {
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+  margin-bottom: 20px;
+  float: right;
+}
+
+.oversized-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
