@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">constellation</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Groups</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="#">Log In</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="calendarBackground">
+
+      <h2 style="font-weight: bold; color: white; font-size: 50px;">Calendar Events</h2>
+      <p style="color: white;">________________________________________________________________________________________________________</p>
+
+      <br>
+
+      <div class="row">
+        <div class="col-md-5 calendarDropdown">
+          <h2>3/7</h2>
+        </div>
+
+        <div class="col-md-5 nameSection">
+          <h2 onclick="myFunction(1)" class="dropbtn">Women's Days</h2>
+          <div id="myDropdown1" class="dropdown-content">
+            <p style="height: 1px;"></p>
+            <p>
+              <b>Info:</b> Everything you need to know about the event and about Chinese New Year. Each year is
+              represented by an Animal. Zao Chen will be hosting this year and providing traditional
+              snacks and drinks.
+            </p>
+            <p style="height: 1px;"></p>
+            <p>
+              <b>Location:</b> 6:00 PM in the Roast House.
+            </p>
+            <p style="height: 1px;"></p>
+            <a href="#"><i><em>Read more about this event here.</em></i></a>
+            <p style="height: 1px;"></p>
+            <h3 class="outline-button">Join Event</h3>
+            <p style="height: 1px;"></p>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="row">
+        <div class="col-md-5 calendarDropdown">
+          <h2>4/8</h2>
+        </div>
+
+        <div class="col-md-5 nameSection">
+          <h2 onclick="myFunction(2)" class="dropbtn">Cinco De Mayo</h2>
+          <div id="myDropdown2" class="dropdown-content">
+            <p style="height: 1px;"></p>
+            <p>
+              <b>Info:</b> Everything you need to know about the event and about Chinese New Year. Each year is
+              represented by an Animal. Zao Chen will be hosting this year and providing traditional
+              snacks and drinks.
+            </p>
+            <p style="height: 1px;"></p>
+            <p>
+              <b>Location:</b> 7:00 PM in the Roast House.
+            </p>
+            <p style="height: 1px;"></p>
+            <a href="#"><i><em>Read more about this event here.</em></i></a>
+            <p style="height: 1px;"></p>
+            <h3 class="outline-button">Join Event</h3>
+            <p style="height: 1px;"></p>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="row">
+        <div class="col-md-5 calendarDropdown">
+          <h2>5/9</h2>
+        </div>
+
+        <div class="col-md-5 nameSection">
+          <h2 onclick="myFunction(3)" class="dropbtn">Chinese New Year</h2>
+          <div id="myDropdown3" class="dropdown-content">
+            <p style="height: 1px;"></p>
+            <p>
+              <b>Info:</b> Everything you need to know about the event and about Chinese New Year. Each year is
+              represented by an Animal. Zao Chen will be hosting this year and providing traditional
+              snacks and drinks.
+            </p>
+            <p style="height: 1px;"></p>
+            <p>
+              <b>Location:</b> 8:00 PM in the Roast House.
+            </p>
+            <p style="height: 1px;"></p>
+            <a href="#"><i><em>Read more about this event here.</em></i></a>
+            <p style="height: 1px;"></p>
+            <h3 class="outline-button">Join Event</h3>
+            <p style="height: 1px;"></p>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+    </div>
+
+    <script>
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function myFunction(number) {
+        document.getElementById("myDropdown" + number).classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+
+  </body>
+
+  <footer>
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/particles.js"></script>
+    <script src="./js/app.js"></script>
+  </footer>
+</html>
