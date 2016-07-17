@@ -8,3 +8,15 @@ $(document).on('scroll', function(){
     console.log('wtf');
   }
 });
+
+$(document).on('click', '.event-arrow', function(){
+  if($(this).hasClass('activated')) {
+    $(this).toggleClass('activated background-blue background-red')
+    $(this).parent().next('.event-description').toggleClass('hidden');
+    $(this).text('>');
+  } else {
+    $(this).toggleClass('activated background-blue background-red')
+    $(this).parent().next('.event-description').toggleClass('hidden');
+    $(this).text('x');
+  }
+});
